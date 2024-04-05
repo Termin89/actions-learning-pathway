@@ -1,0 +1,16 @@
+name: build-test
+on: push
+jobs:
+  build-joj:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Console text
+        run: echo "$(cat hello_world.txt)"
+      - name: use node js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: npm install
+      - run: npm build

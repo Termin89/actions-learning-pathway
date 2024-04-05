@@ -1,0 +1,10 @@
+name: new-test
+on: push
+jobs:
+  new-test-job:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: checkout
+        uses: actions/checkout@v4
+      - run: echo "This is my first test write!!!"
+      
